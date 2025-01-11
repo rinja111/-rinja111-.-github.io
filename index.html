@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>be1.ru</title>
+</head>
+<body>
+<p>&nbsp; &nbsp;&lt;!DOCTYPE html&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;html lang=&quot;en&quot;&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;head&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;TonConnect&lt;/title&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://unpkg.com/tonconnect@latest&quot;&gt;&lt;/script&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;/head&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;body&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;h1&gt;Подключите ваш кошелек TonConnect&lt;/h1&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;button id=&quot;connectButton&quot;&gt;Подключить кошелек&lt;/button&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;script&gt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const tonConnect = new TonConnect({</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;manifestUrl: &quot;YOUR_MANIFEST_URL&quot; // Замените на ваш URL манифеста</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementById(&#39;connectButton&#39;).onclick = async () =&gt; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;try {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const connectedWallet = await tonConnect.connect();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(&#39;Connected Wallet:&#39;, connectedWallet);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Здесь вы можете обработать подключение (например, отправить информацию на сервер)</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} catch (error) {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.error(&quot;Ошибка подключения:&quot;, error);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;};</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;/script&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;/body&gt;</p>
+
+<p>&nbsp; &nbsp;&lt;/html&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>
